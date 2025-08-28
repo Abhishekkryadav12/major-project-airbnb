@@ -88,6 +88,10 @@ app.use((req, res, next) => {
   next();
 });
 
+// simple GET API
+app.get("/api/hello", (req, res) => {
+  res.json({ message: "Hello, API is working!" });
+});
 
 // ✅ Routes
 app.use("/listings", listingRouter);
